@@ -12,7 +12,7 @@
     <!-- MAIN MENU -->
     <ul class="ul-menu" id="top-page">
         <li class="lis" data-text="About"><a class="menu-a" href="#">About</a></li>
-        <li class="lis" data-text="Wayne"><a class="menu-a" href="#">Wayne</a></li>
+        <li class="lis" data-text="Projects"><a class="menu-a" href="#">Projects</a></li>
         <li class="lis" data-text="Contact"><a class="menu-a" href="#">Contact</a></li>
         <li class="lis" data-text="Visual"><a class="menu-a" href="#">Visual</a></li>
     </ul>
@@ -30,7 +30,7 @@
         for (let i=0; i<play.length; i++){
             if (i==1){
                 play[i].onclick=()=>{
-                    const temp = document.querySelector('.web-section');
+                    const temp = document.querySelector('.project');
                     temp.style.opacity = "1";
                     temp.style.zIndex = "1000";
                 }
@@ -231,37 +231,59 @@
     </script>
 
 
-    <!-- WEB PAGE -->
-    <section class="web-section">
-        <div class="web-container">
-            <header class="web-header">
-                <a href="" class="logo">BLack Luck</a>
-                <ul class="web-ul">
-                    <li class="web-li"><a class="web-a" id="active">Web</a></li>
-                    <li class="web-li"><a class="web-a">About</a></li>
-                    <li class="web-li"><a class="web-a">Contact</a></li>
-                    <li class="web-li"><a class="web-a">Visual</a></li>
-                </ul>
-            </header>
-            <div class="web-body">
-                <div class="web-content">
-                    <h2 class="web-h">Nguyen Duy Thinh</h2>
-                    <p class="web-p">This is just my simple web-page template for my idea, in case of possibility, this page would be completely finished. Maybe this kind of design is not one of your route, by the way, this still represent what type of design that I've been heading for.</p>
-                    <a class="back">Back to Menu</a>
+    <!-- PROJECT PAGE -->
+    <div class="project">
+        <div class="rightCircle"></div>
+        <div class="container">
+            <div class="card">
+                <div class="content">
+                    <h2 class="head2">01</h2>
+                    <h3 class="head3">WAN Game</h3>
+                    <p class="paragraph">A game designed using Socket Programming proccess, which has formation of Client and Server operation to connect via Local network</p>
+                    <a class="achor" href="https://famous-antique-470.notion.site/Local-Area-Network-Game-b14c8eaf920743579da987452ae8a067">Read More</a>
                 </div>
-                <div class="imgBx">
-                    <img class="web-img" src="6.png" alt="">
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="head2">02</h2>
+                    <h3 class="head3">OS Decoding</h3>
+                    <p class="paragraph">A program used to decode any format of OS, which is including FAT32 and NTFS, into several importants informations via reading Hex table.</p>
+                    <a class="achor" href="https://famous-antique-470.notion.site/Decoding-OS-formats-e1c0ab6fd25d4ac7bc4f9ac5a59ad9cb">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2 class="head2">03</h2>
+                    <h3 class="head3">Fighting Game</h3>
+                    <p class="paragraph">A fully 2D game built with original python and some advance algorithms calculating variables and conducting the game via solution of Oxy dimension.</p>
+                    <a class="achor" href="https://famous-antique-470.notion.site/Mortal-Kumbat-f82b0e06eda344d18b0ed9970e7b158b">Read More</a>
                 </div>
             </div>
         </div>
-    </section>
+        <script type="text/javascript" src="disc/vanilla-tilt.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll(".card"), {
+                max: 25,
+                speed: 400,
+                glare: true,
+                "max-glare": 1
+            });
+        </script>
+        <div class="leftCircle"></div>
+    </div>
     <script>
-        document.querySelector('.back').onclick=()=>{
-            const temp = document.querySelector('.web-section');
-            temp.style.opacity = "0";
-            temp.style.zIndex = "-1";
+        document.querySelector(".leftCircle").onclick=()=>{
+            const prj = document.querySelector('.project');
+            prj.style.opacity = "0";
+            prj.style.zIndex = "-1";
         }
-    
+        document.querySelector(".rightCircle").onclick=()=>{
+            const prj = document.querySelector('.project');
+            prj.style.opacity = "0";
+            prj.style.zIndex = "-1";
+        }
     </script>
+
+
 </body>
 </html>
